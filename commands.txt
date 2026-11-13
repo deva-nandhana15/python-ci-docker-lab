@@ -42,8 +42,6 @@ Start-Process "https://github.com/$GitHubUser/python-ci-docker-lab/actions" # Ve
 
 Read-Host 'Press Enter after the workflow succeeds' # Wait for the published image
 
-Start-Process "https://hub.docker.com/r/$DockerHubUser/python-ci-lab/tags" # Verify the latest image tag
-
 docker login -u "dva15" # Authenticate to retrieve the published image
 
 docker pull "dva15/python-ci-lab:latest" # Pull the CI-built image
